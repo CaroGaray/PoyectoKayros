@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<xhtml xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:html5="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    
+    
+    <h:head>
+        <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0"></meta>
+    <title>MI EMPRESA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></link>
+    <link rel="stylesheet" href="assets/css/estilos.css"/>
+    </h:head>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.xhtml"><b>INICIO</b><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                 <a class="nav-link" href="productos.xhtml">PRODUCTOS</a>
+      
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href=" " id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    QUIENES SOMOS
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="mision.xhtml">MISION</a>
+                    <a class="dropdown-item" href="vision.xhtml">VISION</a>
+                    
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contacto.xhtml">CONTACTO</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    INGRESAR
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="registro.xhtml">REGISTRARSE</a>
+                    <a class="dropdown-item" href="iniciarsesion.xhtml">INICIAR SESION</a>
+                    
+                </div>
+            </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    TRADUCIR
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="index.xhtml">SPANISH</a>
+                    <a class="dropdown-item" href="indexenglish.xhtml">ENGLISH</a>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <h:body>
+       <div class="container-fluid">
+            <!-- Content here -->
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+                <a class="navbar-brand" href="#">Adsi</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link"  href="index.xhtml?faces-redirect = true">Inicio <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="rUsuario.xhtml?faces-redirect = true">Registro</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+
+
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <h:form>
+                        <h:messages  style="color:red;margin:8px;"/> 
+
+
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="tdl">Tipo Documento</label>
+                                <h:selectOneMenu  id="tdl" styleClass="form-control" value="#{usuarioSesion.tipoDocumento}" >
+                                    <f:selectItem itemValue="0" itemLabel="Seleccione ...."></f:selectItem>
+                                    <f:selectItem itemValue="1" itemLabel="CC"></f:selectItem>
+                                    <f:selectItem itemValue="2" itemLabel="TI"></f:selectItem>
+                                    <f:selectItem itemValue="3" itemLabel="Otro"></f:selectItem>
+                                </h:selectOneMenu>   
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="documentoTC">Documento</label>
+                                <h:inputText value="#{usuarioSesion.documento}" class="form-control" id="documentoTC" html5:placeholder="Numero documento" maxlength="20" required="true" validatorMessage="No debe superar 20 caracteres" requiredMessage="Ingrese un documento"  />
+                                <div class="valid-feedback">
+                                    <h:message for="documentoTC"></h:message>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom01">Nombres</label>
+                                <h:inputText value="#{usuarioSesion.nombre}" class="form-control" id="nombresId"  maxlength="20" html5:placeholder="Nombres"  required="true"  validatorMessage="No debe superar 20 caracteres" requiredMessage="Ingrese un nombre"  />
+                                <div class="valid-feedback">
+                                    <h:message for="nombresId"></h:message>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom02">Apellidos</label>
+                                <h:inputText value="#{usuarioSesion.apellido}" class="form-control" id="apellidosId" html5:placeholder="Apellidos" maxlength="20" required="true" validatorMessage="No debe superar 20 caracteres" requiredMessage="Ingrese un apellido"  />
+                                <div class="valid-feedback">
+                                    <h:message for="apellidosId"></h:message>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustomUsername">Nombre Usuario</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                    </div>
+                                    <h:inputText value="#{usuarioSesion.nombreUsuario}" class="form-control" id="nombreUsuarioId" html5:placeholder="Nombre Usuario" maxlength="20" required="true"  validatorMessage="No debe superar 20 caracteres" requiredMessage="Ingrese un nombre usuario"  />
+                                    <div class="valid-feedback">
+                                        <h:message for="nombreUsuarioId"></h:message>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom03">Clave</label>
+                                <h:inputText value="#{usuarioSesion.clave}" class="form-control" id="claveId" html5:placeholder="Clave" maxlength="20" required="true"  validatorMessage="No debe superar 20 caracteres" requiredMessage="Ingrese una clave"  />
+                                <div class="valid-feedback">
+                                    <h:message for="claveId"></h:message>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom04">Correo</label>
+                                <h:inputText value="#{usuarioSesion.correo}" class="form-control" id="correoId" html5:placeholder="Correo Electronico" maxlength="50" required="true"  validatorMessage="No debe superar 50 caracteres" requiredMessage="Ingrese una correo electronico"  />
+                                <div class="valid-feedback">
+                                    <h:message for="correoId"></h:message>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <h:commandButton  action="#{usuarioSesion.ingresarUsuario()}"  class="btn btn-primary" value="Registrar..."></h:commandButton>
+
+                    </h:form>
+
+                </div>
+                <div class="col-md-2"></div>
+
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+            function estadoOk(a) {
+                Swal.fire(
+                        'Registro OK !',
+                        a,
+                        'success'
+                        );
+
+            }
+
+            function estadoBad(a) {
+                Swal.fire(
+                        'Verifique sus datos, intente nuevamente  !',
+                        a,
+                        'error'
+                        );
+
+            }
+        </script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>     
+        
+    </h:body>
+    
+</xhtml>
+   

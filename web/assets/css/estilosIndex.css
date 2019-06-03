@@ -1,0 +1,39 @@
+body{
+    color:blue;
+    opacity: 0.9;
+    filter: alpha(opacity=50);
+    width: 100%;
+}
+#navbar1{
+    margin-left: 50px;
+}
+
+#footer{
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+
+.intro-text{
+    font-size: 25px;
+    position:center;
+}
+
+#divTexto{
+    margin-top: 23%;
+    margin-left: 10%;
+    position: absolute;
+    z-index: 100;
+    width: 100;
+    text-align:center;
+    text-shadow: 0px 0px 8px #ffffff;
+}
+.brand-heading{
+    font-size: 150px;
+    font-family: "AR BONNIE";
+}
+
+
