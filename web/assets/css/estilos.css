@@ -1,0 +1,33 @@
+body{
+	color: black;
+	opacity: 0.9;
+	filter: alpha(opacity=50);
+	width: 100%;
+	background : url("../img/IMAGEN1.jpg") no-repeat;
+	
+
+
+}
+#navbar1{
+	margin-left: 50px;
+}
+
+#footer{
+	 background: rgba(0,0,0,0.4);
+	 position: fixed;
+	 left: 0;
+	 bottom: 0;
+	 width: 100%;
+	 color: white;
+ }
+
+.marginText{
+	margin-top: 20%!important;
+}
+#bd-example{
+	margin-left: 50px;
+}
+
+body{
+	
+}
