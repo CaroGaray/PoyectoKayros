@@ -4,7 +4,7 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
 
-        <h:head>
+    <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta name="description" content=""/>
@@ -12,12 +12,12 @@
         <h:outputStylesheet name="resources/css/default.css"/>
         <h:outputStylesheet name="resources/css/cssLayout.css"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></link>
-        <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"></link>
+        <link href="../Template/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"></link>
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"></link>
 
         <!-- Custom styles for this template-->
-        <link href="assets/css/sb-admin-2.min.css" rel="stylesheet"></link>
-       <title>Facelets Template</title>
+        <link href="../Template/assets/css/sb-admin-2.min.css" rel="stylesheet"></link>
+        <title>Facelets Template</title>
     </h:head>
 
     <h:body>
@@ -29,42 +29,43 @@
                 </ui:insert>
             </ul>
             <div>
-                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                     <ui:insert name="left">
-                         
-                         <ui:include src="left.xhtml"></ui:include>
-                     </ui:insert>
-                 </nav>
-                <div id="content-wrapper" class="d-flex flex-column">
-                    <ui:insert name="content">
-                        <ui:include src="content.xhtml"></ui:include>
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <ui:insert name="left">
+
+                        <ui:include src="left.xhtml"></ui:include>
                     </ui:insert>
+                </nav> <div>
+                    <div id="content-wrapper" class="d-flex flex-column">
+                        <ui:insert name="content">
+                            <ui:include src="content.xhtml"></ui:include>
+                        </ui:insert>
+                    </div>
                 </div>
             </div>
         </div>
-            <footer class="sticky-footer bg-white">
-                <ui:insert name="bottom">
-                    <ui:include src="bottom.xhtml"></ui:include>
-                </ui:insert>
-            </footer>
-       
+        <footer class="sticky-footer bg-white">
+            <ui:insert name="bottom">
+                <ui:include src="bottom.xhtml"></ui:include>
+            </ui:insert>
+        </footer>
+
 
         <!-- Bootstrap core JavaScript-->
-        <script src="assets/vendor/jquery/jquery.min.js"></script>
-        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../Template/assets/vendor/jquery/jquery.min.js"></script>
+        <script src="../Template/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
         <!-- Core plugin JavaScript-->
-        <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="../Template/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
         <!-- Custom scripts for all pages-->
-        <script src="assets/js/sb-admin-2.min.js"></script>
+        <script src="../Template/assets/js/sb-admin-2.min.js"></script>
 
         <!-- Page level plugins -->
-        <script src="assets/vendor/chart.js/Chart.min.js"></script>
+        <script src="../Template/assets/vendor/chart.js/Chart.min.js"></script>
 
         <!-- Page level custom scripts -->
-        <script src="assets/js/demo/chart-area-demo.js"></script>
-        <script src="assets/js/demo/chart-pie-demo.js"></script>
+        <script src="../Template/assets/js/demo/chart-area-demo.js"></script>
+        <script src="../Template/assets/js/demo/chart-pie-demo.js"></script>
     </h:body>
 
 </html>
